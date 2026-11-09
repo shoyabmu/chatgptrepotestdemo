@@ -35,7 +35,7 @@ resource "aws_instance" "my_ec2" {
 
 terraform {
   backend "s3" {
-    bucket       = "your-terraform-state-bucket for statefile"
+    bucket       = "terraformbackend-demo-123456"
     key          = "dev/terraform.tfstate"
     region       = "ap-south-1"
     encrypt      = true
