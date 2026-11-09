@@ -23,7 +23,7 @@ data "aws_ami" "linux" {
   }
 }
 
-# Create EC2 instance
+# Create EC2 instance one only
 resource "aws_instance" "my_ec2" {
   ami           = data.aws_ami.linux.id
   instance_type = "t3.micro"
