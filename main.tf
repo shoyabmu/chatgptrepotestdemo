@@ -30,3 +30,13 @@ resource "aws_instance" "my_ec2" {
     Name = "My-Terraform-EC2"
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket       = "your-terraform-state-bucket for statefile"
+    key          = "dev/terraform.tfstate"
+    region       = "ap-south-1"
+    encrypt      = true
+    use_lockfile = true
+  }
+}
